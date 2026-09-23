@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Ajustes de accesibilidad y Leaflet para personas mayores */
+.leaflet-container {
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  background: #fdfbf7;
+}
+
+.custom-bench-marker {
+  background: transparent;
+  border: none;
+}
+
+.user-location-marker {
+  background: transparent;
+  border: none;
+}
+
+/* Reducir mareos por movimiento si el usuario tiene preferencia activada */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Distribución exacta: Columna Izquierda (Texto) 30%, Columna Derecha (Mapa) 70% */
+@media (min-width: 640px) {
+  .left-text-column-30 {
+    width: 30% !important;
+    max-width: 30% !important;
+    min-width: 0 !important;
+    flex: 0 0 30% !important;
+  }
+  .right-map-column-70 {
+    width: 70% !important;
+    max-width: 70% !important;
+    min-width: 0 !important;
+    flex: 0 0 70% !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .left-text-column-30 {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .right-map-column-70 {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Siéntate Madrid - Bancos Públicos para Descansar",
+  "description": "Encuentra el banco público más cercano y cómodo en Madrid con respaldo y sombra para descansar sin prisas ni complicaciones.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
